@@ -22,6 +22,7 @@ cd ${otp_untar_dir}
 ./configure --with-ssl --enable-dirty-schedulers
 make -j$(getconf _NPROCESSORS_ONLN)
 make release
+make release_docs DOC_TARGETS="chunks"
 
 cd ../
 mv otp-${OTP_REF}/release/x86_64-unknown-linux-gnu/ ${OTP_REF}

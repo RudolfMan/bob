@@ -50,6 +50,7 @@ gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)"
 
 make -j$(getconf _NPROCESSORS_ONLN)
 make release
+make release_docs DOC_TARGETS="chunks"
 
 cd ../
 mv otp-${OTP_REF}/release/x86_64-pc-linux-musl/ ${OTP_REF}
